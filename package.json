@@ -1,5 +1,5 @@
 {
-  "name": "wot-design-uni",
+  "name": "@vtrbo/wot-design-uni",
   "version": "1.10.0",
   "license": "MIT",
   "repository": {
@@ -50,6 +50,7 @@
     "release-major": "standard-version --release-as major",
     "release-minor": "standard-version --release-as minor",
     "release-patch": "standard-version --release-as patch",
+    "release-alpha": "standard-version --prerelease alpha",
     "release-tag": "esno ./scripts/release.ts",
     "build:web-types": "esno ./scripts/build-web-types.ts",
     "compiler": "esno ./scripts/compiler.ts",

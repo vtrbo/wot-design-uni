@@ -34,9 +34,9 @@ inquirer
     {
       type: 'list',
       name: 'version',
-      message: '请选择发版类型（默认值：✨ minor)',
-      choices: ['🐛 patch 小版本', '✨ minor 中版本', '🚀 major 大版本'],
-      default: '✨ minor 中版本'
+      message: '请选择发版类型（默认值：🐟 alpha)',
+      choices: ['🐟 alpha 预发版', '🐛 patch 小版本', '✨ minor 中版本', '🚀 major 大版本'],
+      default: '🐟 alpha 预发版'
     },
     {
       type: 'list',
@@ -53,6 +53,9 @@ inquirer
     }
     // 项目版本更新
     switch (answers['version']) {
+      case '🐟 alpha 预发版':
+        execSync('pnpm release-alpha')
+        break
       case '🐛 patch 小版本':
         execSync('pnpm release-patch')
         break
